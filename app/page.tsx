@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Product, ApiResponse } from '@/types/product';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
-
+export const dynamic = "force-dynamic";
 async function getProducts(): Promise<Product[]> {
   try {
     const res = await fetch(`${API_URL}/products`, {
