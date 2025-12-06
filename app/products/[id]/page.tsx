@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { Product, ApiResponse } from '@/types/product';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
-
+export const dynamic = "force-dynamic";
 async function getProduct(id: string): Promise<Product | null> {
   try {
     const res = await fetch(`${API_URL}/products/${id}`, {
